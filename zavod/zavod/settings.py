@@ -86,6 +86,7 @@ BACKFILL_RELEASE = env_str("ZAVOD_BACKFILL_RELEASE", "latest")
 # File path for the resolver path used for entity deduplication
 RESOLVER_PATH = env.get("ZAVOD_RESOLVER_PATH")
 RESOLVER_PATH = env.get("OPENSANCTIONS_RESOLVER_PATH", RESOLVER_PATH)
+RESOLVER_PATH = "C:\\xampp\\htdocs\\opensanctions\\data\\resolver.ijson"
 
 # HTTP settings
 HTTP_TIMEOUT = 1200
@@ -104,7 +105,12 @@ OPENSANCTIONS_API_URL = env.get(
 )
 OPENSANCTIONS_API_KEY = env.get("ZAVOD_OPENSANCTIONS_API_KEY", None)
 
-SYNC_POSITIONS = as_bool(env_str("ZAVOD_SYNC_POSITIONS", "true"))
+SYNC_POSITIONS = as_bool(env_str("ZAVOD_SYNC_POSITIONS", "False"))
+SYNC_POSITIONS = False
+ZAVOD_SYNC_POSITIONS = False
+# Imprimir el valor de SYNC_POSITIONS para verificar
+print(f"SYNC_POSITIONS está definido como: {SYNC_POSITIONS}")
+print(f"ZAVOD_SYNC_POSITIONS está definido como: {ZAVOD_SYNC_POSITIONS}")
 
 # pywikibot settings for editing Wikidata
 WD_CONSUMER_TOKEN = env.get("ZAVOD_WD_CONSUMER_TOKEN")

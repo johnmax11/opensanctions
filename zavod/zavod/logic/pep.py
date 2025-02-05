@@ -77,6 +77,9 @@ def categorise(
       is_pep: Initial value for is_pep in the database if it gets added.
     """
     categorisation = get_categorisation(context, position.id)
+    # Si categorisation es None, le damos un valor predeterminado
+    #if categorisation is None:
+    #    categorisation = True  # O lo que sea necesario para tu caso
 
     if categorisation is None:
         global NOTIFIED_SYNC_POSITIONS

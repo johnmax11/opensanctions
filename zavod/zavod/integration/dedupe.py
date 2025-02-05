@@ -23,7 +23,7 @@ AUTO_USER = "zavod/xref"
 def _get_resolver_path() -> Path:
     """Get the path to the deduplication resolver."""
     if settings.RESOLVER_PATH is None:
-        raise RuntimeError("Please set $ZAVOD_RESOLVER_PATH.")
+        raise RuntimeError("Please john set $ZAVOD_RESOLVER_PATH.")
     return Path(settings.RESOLVER_PATH)
 
 
